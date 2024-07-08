@@ -1,11 +1,17 @@
 plugins {
+    `java`
     `java-library`
     `maven-publish`
 }
 
 group = "dev.dubsky"
-version = "0.1.2"
+version = "0.2.0"
 description = "A library that offers neat logging utilities like color-coding, pre-formatting etc."
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
 
 repositories {
     mavenCentral()
@@ -68,6 +74,6 @@ testing {
 
 java {
     toolchain {
-        languageVersion = JavaLanguageVersion.of(21)
+        languageVersion = JavaLanguageVersion.of(17)
     }
 }
