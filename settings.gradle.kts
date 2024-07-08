@@ -12,4 +12,3 @@ plugins {
 }
 
 rootProject.name = "AdvancedLog"
-include("lib")
