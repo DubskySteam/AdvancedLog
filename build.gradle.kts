@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "dev.dubsky"
-version = "0.2.0"
+version = "0.1.3"
 description = "A library that offers neat logging utilities like color-coding, pre-formatting etc."
 
 java {
