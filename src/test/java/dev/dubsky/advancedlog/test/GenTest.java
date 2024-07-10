@@ -2,16 +2,16 @@ package dev.dubsky.advancedlog.test;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
 import dev.dubsky.advancedlog.AdvLogger;
 import dev.dubsky.advancedlog.Color;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
-import static org.junit.jupiter.api.Assertions.*;
 
 public class GenTest {
-    private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 
     @BeforeEach
     public void setUp() {
@@ -28,7 +28,7 @@ public class GenTest {
     @Test
     public void testOutWithColorEnum() {
         AdvLogger.output(Color.YELLOW, "Yellow message");
-        // assertEquals("\033[93mYellow message\033[0m", outContent.toString());
+        // assertEquals("\033[93mYellow message\033[0m\n", outContent.toString());
     }
 
     @Test

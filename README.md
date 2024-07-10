@@ -8,7 +8,7 @@
 
 ## 🌟 Features
 - [X] Basic output
-- [X] Color coding
+- [X] Color coding (Strings, Exceptions)
 
 ## 🚀 Upcoming Features
 - [ ] Object parsing
@@ -46,6 +46,55 @@ Maven:
     <version>0.1.2</version>
 </dependency>
 ```
+
+### Test class to test outputs
+
+```java
+import java.io.FileNotFoundException;
+
+public class Main {
+    public static void main(String[] args) {
+        LogWriter logWriter = new LogWriter();
+
+        System.out.println("Testing LogWriter with int mode:");
+        logWriter.write(0, "Green message");
+        logWriter.write(1, "Yellow message");
+        logWriter.write(2, "Red message");
+        logWriter.write(3, "Reset message");
+
+        System.out.println("\nTesting LogWriter with Color enum:");
+        logWriter.write(Color.GREEN, "Green message");
+        logWriter.write(Color.YELLOW, "Yellow message");
+        logWriter.write(Color.RED, "Red message");
+        logWriter.write(Color.RESET, "Reset message");
+
+        System.out.println("\nTesting LogWriter without color:");
+        logWriter.write("Plain message");
+
+        System.out.println("\nTesting AdvLog with int color code:");
+        AdvLogger.config.enable = true;
+        AdvLogger.output(0, "Green message");
+        AdvLogger.output(1, "Yellow message");
+        AdvLogger.output(2, "Red message");
+        AdvLogger.output(3, "Reset message");
+
+        System.out.println("\nTesting AdvLog with Color enum:");
+        AdvLogger.output(Color.GREEN, "Green message");
+        AdvLogger.output(Color.YELLOW, "Yellow message");
+        AdvLogger.output(Color.RED, "Red message");
+        AdvLogger.output(Color.RESET, "Reset message");
+
+        System.out.println("\nTesting AdvLog with DEBUG off:");
+        AdvLogger.config.enable = false;
+        AdvLogger.output(Color.RED, "This message should not appear");
+        AdvLogger.config.enable = true;
+
+        System.out.println("\nTesting Exception handling");
+        AdvLogger.output(Color.RED, new FileNotFoundException("File not found"));
+    }
+}
+```
+
 
 ## 📌 Version History
 
