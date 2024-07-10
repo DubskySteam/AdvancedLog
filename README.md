@@ -4,7 +4,7 @@
 
 ![GitHub](https://img.shields.io/github/license/dubskysteam/RapidRequest?style=for-the-badge)
 
-[![Gradle Package](https://github.com/DubskySteam/AdvancedLog/actions/workflows/gradle-publish.yml/badge.svg?branch=master)](https://github.com/DubskySteam/AdvancedLog/actions/workflows/gradle-publish.yml)
+[![Gradle Package](https://github.com/DubskySteam/AdvancedLog/actions/workflows/gradle-publish.yml/badge.svg)](https://github.com/DubskySteam/AdvancedLog/actions/workflows/gradle-publish.yml)
 
 ## 🌟 Features
 - [X] Basic output
